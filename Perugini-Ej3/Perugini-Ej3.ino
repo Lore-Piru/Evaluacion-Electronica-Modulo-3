@@ -321,7 +321,7 @@ void muestreo(){
   if(estadoC3)
     Serial.print(mapeoDeCanal(3));
     
-  if(!(((estadoC1+estadoC2+estadoC3+estadoC4) == 1) && estadoC4))
+  if((estadoC1 || estadoC2) && estadoC3)
     Serial.print(",");
 
   if(estadoC4)
